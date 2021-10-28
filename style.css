@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 section {
   width: 500px;
   height: 500px;
@@ -11,8 +18,8 @@ section {
 }
 
 .drawer {
-  width: 4.6%;
-  height: 4.6%;
+  width: 5%;
+  height: 5%;
   border: 0.1px solid black;
 }
 
@@ -51,7 +58,8 @@ button {
 .color:hover {
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
-  margin: auto 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   border: 1px solid #1b1b1b;
 }
 /*# sourceMappingURL=style.css.map */
