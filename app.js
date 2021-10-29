@@ -1,21 +1,16 @@
 const color = document.querySelectorAll('.color');
-const section = document.querySelector("section")
+const section = document.querySelector("section");
+const circles = document.querySelector('.circles')
 
-//inserisco i colori
-color[0].style.background = "black";
-color[1].style.background = "red";
-color[2].style.background = "blue";
-color[3].style.background = "grey";
-color[4].style.background = "orange";
-color[5].style.background = "yellow";
-color[6].style.background = "salmon";
-color[7].style.background = "greenyellow";
-color[8].style.background = "firebrick";
-color[9].style.background = "khaki";
 
+
+//imposto i colori
+let counter = 0;
+const colorsPallette= ["black","red","blue","grey","orange","yellow","salmon","greenyellow","firebrick","white","khaki"] 
+for (x of color) x.style.background = colorsPallette[counter], counter++;
 
 //genero i blocchi da colorare
-for (let i = 0; i < 400; i++){
+for (let i = 0; i < 1600; i++){
 const div = document.createElement("div");
 div.setAttribute('class', 'drawer');
 section.appendChild(div);}
@@ -25,20 +20,31 @@ section.appendChild(div);}
 //colori
 let colorChosen = "";
 function colorChose(event){
-  colorChose = event.target.style.backgroundColor;
-  console.log(colorChosen)
+  colorChosen = event.target.style.backgroundColor;
 }
 for (x of color) x.addEventListener("click", colorChose)
+let isStoppedColor = false;
+
 
 //blocchi da colorare
+const stopColor = () => section.addEventListener("mouseup", () =>  isStoppedColor = true,);
 const draw = document.querySelectorAll('.drawer')
 function colorDraw(event){
-    event.target.style.backgroundColor = colorChose;
-}
-for (x of draw) x.addEventListener("click", colorDraw)
+  if (!isStoppedColor){
+    event.target.style.backgroundColor = colorChosen; 
+}}
+
+
+
+const mousecolor =()=> {for (x of draw) x.addEventListener("mouseover", colorDraw),
+isStoppedColor = false;}
+section.addEventListener("mousedown", mousecolor)
+stopColor()
+
+
+
 
 //cancella
-
 const removeAll = document.querySelectorAll("button")
 removeAll[0].addEventListener("click",() => {
     for (x of draw) x.style.backgroundColor = "#fff"
