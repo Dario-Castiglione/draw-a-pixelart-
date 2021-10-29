@@ -17,10 +17,13 @@ section {
       flex-wrap: wrap;
 }
 
+.border {
+  border: 1px solid #1b1b1b;
+}
+
 .drawer {
   width: 2.5%;
   height: 2.5%;
-  border: 0.1px solid black;
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -28,7 +31,8 @@ section {
 
 button {
   display: block;
-  margin: 0 auto;
+  margin: 10px auto;
+  padding: 5px;
 }
 
 .colorTable {

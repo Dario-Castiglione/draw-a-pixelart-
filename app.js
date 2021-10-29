@@ -1,6 +1,6 @@
 const color = document.querySelectorAll('.color');
 const section = document.querySelector("section");
-const circles = document.querySelector('.circles')
+
 
 
 
@@ -45,8 +45,26 @@ stopColor()
 
 
 //cancella
-const removeAll = document.querySelectorAll("button")
-removeAll[0].addEventListener("click",() => {
+const Btn = document.querySelectorAll("button")
+Btn[0].addEventListener("click",() => {
     for (x of draw) x.style.backgroundColor = "#fff"
 })
+
+
+let griglia = false;
+const pixel = document.querySelectorAll(".drawer")
+Btn[1].addEventListener("click", () =>{
+ if (!griglia) {
+
+for (x of pixel) x.style.border = "1px solid #1b1b1b";
+Btn[1].innerText ="RIMUOVI GRIGLIA";
+griglia = true;}
+else {
+  for (x of pixel) x.style.border = "";
+Btn[1].innerText ="AGGIUNGI GRIGLIA";
+griglia = false;}
+});
+
+
+
 
