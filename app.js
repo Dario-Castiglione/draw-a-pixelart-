@@ -1,12 +1,9 @@
 const color = document.querySelectorAll('.color');
 const section = document.querySelector("section");
 
-
-
-
 //imposto i colori
 let counter = 0;
-const colorsPallette= ["black","red","blue","grey","orange","yellow","salmon","greenyellow","firebrick","white","khaki"] 
+const colorsPallette= ["black","red","blue","grey","orange","yellow","salmon","greenyellow","firebrick","white","khaki","black"] 
 for (x of color) x.style.background = colorsPallette[counter], counter++;
 
 //genero i blocchi da colorare
@@ -15,33 +12,27 @@ const div = document.createElement("div");
 div.setAttribute('class', 'drawer');
 section.appendChild(div);}
 
-
-
 //colori
 let colorChosen = "";
 function colorChose(event){
   colorChosen = event.target.style.backgroundColor;
 }
 for (x of color) x.addEventListener("click", colorChose)
-let isStoppedColor = false;
 
 
 //blocchi da colorare
-const stopColor = () => section.addEventListener("mouseup", () =>  isStoppedColor = true,);
+let isStoppedColor = false;
+const stopColor = () => document.addEventListener("mouseup", () =>  isStoppedColor = true,);
 const draw = document.querySelectorAll('.drawer')
 function colorDraw(event){
   if (!isStoppedColor){
     event.target.style.backgroundColor = colorChosen; 
 }}
 
-
-
 const mousecolor =()=> {for (x of draw) x.addEventListener("mouseover", colorDraw),
 isStoppedColor = false;}
-section.addEventListener("mousedown", mousecolor)
+document.addEventListener("mousedown", mousecolor)
 stopColor()
-
-
 
 
 //cancella
@@ -51,6 +42,7 @@ Btn[0].addEventListener("click",() => {
 })
 
 
+//griglia
 let griglia = false;
 const pixel = document.querySelectorAll(".drawer")
 Btn[1].addEventListener("click", () =>{
@@ -66,5 +58,26 @@ griglia = false;}
 });
 
 
+/*
+function mobile() {
+  //var el = document.getElementById("canvas");
+  el.addEventListener("touchstart", handleStart, false);
+  el.addEventListener("touchend", handleEnd, false);
+  el.addEventListener("touchcancel", handleCancel, false);
+  el.addEventListener("touchmove", handleMove, false);
+}
+document.addEventListener("DOMContentLoaded", startup);
+*/
 
+//let isStoppedColorMobile = false;
+//const stopColorMobile = () => section.addEventListener("touchend", () =>  isStoppedColorMobile = true, true);
+//const draw = document.querySelectorAll('.drawer')
+function colorDrawMobile(TouchEvent){
+  //if (!isStoppedColorMobile){
+    TouchEvent.changedTouches.target.style.backgroundColor = colorChosen; 
+    console.log("ciao")
+}//}
 
+const mousecolorMobile =()=> {for (x of draw) x.addEventListener("touchmove", colorDrawMobile, true)}
+//stopColorMobile()
+mousecolorMobile()
