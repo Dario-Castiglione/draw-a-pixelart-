@@ -4,6 +4,12 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+body{
+  background: #a73737;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #7a2828, #a73737);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7a2828, #a73737); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
 .wrap{
   border: 5px solid #1b1b1b;
  width: fit-content;

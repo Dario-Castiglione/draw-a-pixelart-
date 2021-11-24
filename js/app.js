@@ -38,7 +38,7 @@ stopColor()
 //cancella
 const Btn = document.querySelectorAll("button")
 Btn[0].addEventListener("click",() => {
-    for (x of draw) x.style.backgroundColor = "#fff"
+    for (x of draw) x.style.backgroundColor = ""
 })
 
 
