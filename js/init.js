@@ -54,57 +54,57 @@ const initDraw = () => {
     }, 1100);
     setTimeout(() => {
       draw[727].style.backgroundColor="black"
-    }, 1200);
+    }, 1150);
     setTimeout(() => {
       draw[768].style.backgroundColor="black"
-    }, 1300);
+    }, 1200);
     setTimeout(() => {
       draw[809].style.backgroundColor="black"
-    }, 1400);
+    }, 1250);
     setTimeout(() => {
       draw[850].style.backgroundColor="black"
-    }, 1500);
+    }, 1300);
     setTimeout(() => {
       draw[851].style.backgroundColor="black"
-    }, 1600);
+    }, 1350);
     setTimeout(() => {
       draw[892].style.backgroundColor="black"
-    }, 1700);
+    }, 1400);
     setTimeout(() => {
       draw[893].style.backgroundColor="black"
-    }, 1800);
+    }, 1450);
     setTimeout(() => {
       draw[894].style.backgroundColor="black"
-    }, 1900);
+    }, 1500);
     setTimeout(() => {
       draw[895].style.backgroundColor="black"
-    }, 2000);
+    }, 1550);
     setTimeout(() => {
       draw[896].style.backgroundColor="black"
-    }, 2100);
+    }, 1600);
     setTimeout(() => {
       draw[897].style.backgroundColor="black"
-    }, 2200);
+    }, 1650);
     setTimeout(() => {
       draw[898].style.backgroundColor="black"
-    }, 2300);
+    }, 1700);
     setTimeout(() => {
       draw[859].style.backgroundColor="black"
-    }, 2400);
+    }, 1750);
     setTimeout(() => {
       draw[820].style.backgroundColor="black"
-    }, 2500);
+    }, 1800);
     setTimeout(() => {
       draw[781].style.backgroundColor="black"
-    }, 2600);
+    }, 1850);
     setTimeout(() => {
       draw[742].style.backgroundColor="black"
-    }, 2700);
+    }, 1900);
     setTimeout(() => {
       draw[703].style.backgroundColor="black"
-    }, 2800);
+    }, 1950);
     setTimeout(() => {
       draw[664].style.backgroundColor="black"
-    }, 2900);
+    }, 2000);
   
   }
