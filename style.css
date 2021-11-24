@@ -12,14 +12,14 @@ section {
   margin: 50px auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
 .drawer {
-  width: 2.5%;
-  height: 2.5%;
+
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
   -webkit-user-select: none;
