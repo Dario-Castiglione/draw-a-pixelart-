@@ -29,7 +29,7 @@ function colorDraw(event){
     event.target.style.backgroundColor = colorChosen; 
 }}
 
-const mousecolor =()=> {for (x of draw) x.addEventListener("mouseover", colorDraw),
+const mousecolor =()=> {section.addEventListener("mouseover", colorDraw),
 isStoppedColor = false;}
 document.addEventListener("mousedown", mousecolor)
 stopColor()
