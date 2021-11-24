@@ -34,13 +34,11 @@ isStoppedColor = false;}
 document.addEventListener("mousedown", mousecolor)
 stopColor()
 
-
 //cancella
 const Btn = document.querySelectorAll("button")
 Btn[0].addEventListener("click",() => {
     for (x of draw) x.style.backgroundColor = ""
 })
-
 
 //griglia
 let griglia = false;
@@ -57,27 +55,4 @@ Btn[1].innerText ="AGGIUNGI GRIGLIA";
 griglia = false;}
 });
 
-
-/*
-function mobile() {
-  //var el = document.getElementById("canvas");
-  el.addEventListener("touchstart", handleStart, false);
-  el.addEventListener("touchend", handleEnd, false);
-  el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchmove", handleMove, false);
-}
-document.addEventListener("DOMContentLoaded", startup);
-*/
-
-//let isStoppedColorMobile = false;
-//const stopColorMobile = () => section.addEventListener("touchend", () =>  isStoppedColorMobile = true, true);
-//const draw = document.querySelectorAll('.drawer')
-function colorDrawMobile(TouchEvent){
-  //if (!isStoppedColorMobile){
-    TouchEvent.changedTouches.target.style.backgroundColor = colorChosen; 
-    console.log("ciao")
-}//}
-
-const mousecolorMobile =()=> {for (x of draw) x.addEventListener("touchmove", colorDrawMobile, true)}
-//stopColorMobile()
-mousecolorMobile()
+initDraw()
