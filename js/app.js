@@ -48,7 +48,7 @@ const pixel = document.querySelectorAll(".drawer")
 Btn[1].addEventListener("click", () =>{
  if (!griglia) {
 
-for (x of pixel) x.style.border = "1px solid #1b1b1b";
+for (x of pixel) x.style.border = "1px solid #1b1b1b5b";
 Btn[1].innerText ="RIMUOVI GRIGLIA";
 griglia = true;}
 else {
